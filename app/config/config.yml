@@ -48,11 +48,17 @@ assetic:
     assets:
         scripts_boundle:
             inputs:
-                - %kernel.root_dir%/../web/bundles/flopupmain/assets/require-built.js        
-                - %kernel.root_dir%/../web/template/javascript/main.js      
+                - %kernel.root_dir%/../web/bundles/flopupmain/assets/jquery/jquery.js       
+                - %kernel.root_dir%/../web/bundles/flopupmain/assets/underscore/underscore-min.js       
+                - %kernel.root_dir%/../web/bundles/flopupmain/assets/bootstrap/js/bootstrap.min.js      
+                - %kernel.root_dir%/../web/template/javascript/main.js
+        scripts_boundle_ie:
+            inputs:
+                - %kernel.root_dir%/../web/bundles/flopupmain/assets/html5shiv/dist/html5shiv.js  
+                - %kernel.root_dir%/../web/bundles/flopupmain/assets/respond/dest/respond.min.js
         styles_boundle:
             inputs:
-                - %kernel.root_dir%/../web/bundles/flopupmain/assets/require.css
+                - %kernel.root_dir%/../web/bundles/flopupmain/assets/normalize-css/normalize.css
                 - %kernel.root_dir%/../web/bundles/flopupmain/assets/bootstrap/css/bootstrap.min.css
                 - %kernel.root_dir%/../web/template/stylesheets/main.css
 

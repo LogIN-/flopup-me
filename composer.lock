@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7eb8990fa55fc21eedc94fa9664ead4c",
+    "hash": "bee29596fba30c987933086f537d4646",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1165,6 +1165,51 @@
             ],
             "description": "Allows installation of Components via Composer.",
             "time": "2013-08-31 23:46:48"
+        },
+        {
+            "name": "rogeriopradoj/respond",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rogeriopradoj/Respond.git",
+                "reference": "885cd21e14e0199c4d126e4fe563581de2cd6aea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rogeriopradoj/Respond/zipball/885cd21e14e0199c4d126e4fe563581de2cd6aea",
+                "reference": "885cd21e14e0199c4d126e4fe563581de2cd6aea",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "name": "respond",
+                    "scripts": [
+                        "dest/respond.src.js"
+                    ],
+                    "files": [
+                        "dest/respond.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rogerio Prado de Jesus",
+                    "email": "rogeriopradoj@gmail.com"
+                }
+            ],
+            "description": "A way to install Respond.js via composer",
+            "keywords": [
+                "JS"
+            ],
+            "time": "2014-02-14 20:48:52"
         },
         {
             "name": "sensio/distribution-bundle",

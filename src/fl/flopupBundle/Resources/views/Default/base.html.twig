@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="{{ _charset }}" />
-        <meta name="robots" content="noindex,nofollow" />
-        <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="{{ _charset }}" />
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="author" content="LogIN-">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>{% block title %}FlopUp.me{% endblock %}</title>
 
-        {% block javascripts %}
-            {% javascripts
-                          '@scripts_boundle'
-                          filter='yui_js'
-                          output='assets/main.js'
-            %}
-            <script src="{{ asset_url }}"></script>
-            {% endjavascripts %}
-        {% endblock %}
+    {% block javascripts %}
+        {% javascripts
+                      '@scripts_boundle'
+                      filter='yui_js'
+                      output='assets/main.js'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
 
-        {% block stylesheets %}
-            {% stylesheets
-                          '@styles_boundle' 
-                          filter='yui_css'
-                          output='assets/main.css' %}
-                <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
-            {% endstylesheets %}
-        {% endblock %}
-
-        {% block head %}{% endblock %}
+    {% block stylesheets %}
+        {% stylesheets
+                      '@styles_boundle' 
+                      filter='yui_css'
+                      output='assets/main.css' %}
+            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {% endblock %}
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        {% javascripts
+                      '@scripts_boundle_ie'
+                      filter='yui_js'
+                      output='assets/ie_dep.js'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    <![endif]-->
+    {% block head %}{% endblock %}
     </head>
     <body>
         <div id="content">
