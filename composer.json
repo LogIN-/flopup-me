@@ -13,9 +13,9 @@
         "type": "package",
         "package": {
             "name": "jquery/jquery",
-            "version": "1.10.2",
+            "version": "1.11.1",
             "dist": {
-                "url": "http://code.jquery.com/jquery-1.10.2.js",
+                "url": "http://code.jquery.com/jquery-1.11.1.js",
                 "type": "file"
             }
         }
@@ -32,8 +32,10 @@
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
+
         "components/bootstrap": "3.2.0",
-        "components/jquery": "1.11.1"
+        "components/jquery": "1.11.1",
+        "afarkas/html5shiv": "3.7.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
@@ -60,6 +62,8 @@
         ]
     },
     "config": {
+        "component-dir": "web/bundles/flflopupBundle/assets",
+        "component-baseurl": "/assets",
         "bin-dir": "bin"
     },
     "extra": {
