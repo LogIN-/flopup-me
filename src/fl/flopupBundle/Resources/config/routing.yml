@@ -1,7 +1,9 @@
-flflopup_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: flflopupBundle:Default:index }
+home:
+  pattern:  /
+  defaults: { _controller: flflopupBundle:Default:index }
 
-flflopup_contact:
-    path:     /hello/{name}
-    defaults: { _controller: flflopupBundle:Default:index }
+contact:
+  pattern: /contact
+  defaults:
+    _controller: FrameworkBundle:Template:template
+    template: 'flflopupBundle:Default:contact.html.twig'
