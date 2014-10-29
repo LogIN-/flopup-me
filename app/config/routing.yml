@@ -1,0 +1,4 @@
+flflopup:
+    resource: "@flflopupBundle/Resources/config/routing.yml"
+    prefix:   /
+
