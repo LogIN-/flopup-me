@@ -9,7 +9,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $name = "Index";
-        return $this->render('flflopupBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('flflopupBundle:Default:pages/homepage.html.twig', array('name' => $name));
 
     }
 }

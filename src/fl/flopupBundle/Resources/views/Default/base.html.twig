@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="{{ _charset }}" />
+        <meta name="robots" content="noindex,nofollow" />
+        <title>{% block title %}{% endblock %}</title>
+
+        {% block javascripts %}
+            {% javascripts
+                          '@scripts_boundle'
+                          filter='yui_js'
+                          output='assets/main.js'
+            %}
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
+
+        {% block stylesheets %}
+            {% stylesheets
+                          '@styles_boundle' 
+                          filter='yui_css'
+                          output='assets/main.css' %}
+                <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+            {% endstylesheets %}
+        {% endblock %}
+
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div id="content">
+            <div class="sf-reset">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        {% block footer %}
+            <footer>Credits & copyright</footer>
+        {% endblock %}
+    </body>
+</html>

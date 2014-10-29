@@ -33,10 +33,11 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "components/bootstrap": "3.2.0",
-        "components/jquery": "1.11.1",
         "afarkas/html5shiv": "3.7.2",
-        "twbs/bootstrap": "3.2.0"
+        "components/normalize.css": "2.1.2",
+        "components/jquery": "1.11.1",
+        "components/bootstrap": "3.2.0",       
+        "components/underscore": "1.7.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
