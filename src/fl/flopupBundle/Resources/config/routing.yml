@@ -1,3 +1,7 @@
 flflopup_homepage:
     path:     /hello/{name}
     defaults: { _controller: flflopupBundle:Default:index }
+
+flflopup_contact:
+    path:     /hello/{name}
+    defaults: { _controller: flflopupBundle:Default:index }
