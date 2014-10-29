@@ -4,8 +4,42 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "98beb4591925884542e06a085ae4c31f",
+    "hash": "ef1929a5c7c1147517abb74c0635b99f",
     "packages": [
+        {
+            "name": "afarkas/html5shiv",
+            "version": "3.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aFarkas/html5shiv.git",
+                "reference": "40df868a76f1f19ea23b123d1480d44a7195f349"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aFarkas/html5shiv/zipball/40df868a76f1f19ea23b123d1480d44a7195f349",
+                "reference": "40df868a76f1f19ea23b123d1480d44a7195f349",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/html5shiv.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-2.0"
+            ],
+            "description": "Defacto way to enable use of HTML5 sectioning elements in legacy Internet Explorer.",
+            "homepage": "http://paulirish.com/2011/the-history-of-the-html5-shiv/",
+            "time": "2014-05-03 10:11:35"
+        },
         {
             "name": "components/bootstrap",
             "version": "3.2.0",
