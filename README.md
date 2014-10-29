@@ -2,9 +2,33 @@
 `flopup-me` is demo repo.
 
 
+## Install dependencies and configure:
+
+### Now you'll need composer to install dependencies:
+```bash
+$ curl -sS https://getcomposer.org/installer | php
+$ php composer.phar install
+```
+
+### Check everything works:
+```bash
+$ php ./app/check.php
+```
+
+### Create the database
+Use Doctrine to create the database:
+```bash
+php app/console doctrine:database:create
+```
+
+### Run the PHP server:
+```bash
+php app/console server:run 192.168.0.1:8080
+```
+
 ## Support and Bugs
 If you are having problems, have found a bug, or want to contribute don't be shy.
-[Open a ticket](git@github.com:LogIN-/flopup-me.git) on GitHub.
+[Open a ticket](https://github.com/LogIN-/flopup-me/issues) on GitHub.
 
 ## License
 The MIT License (MIT)
