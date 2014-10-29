@@ -35,7 +35,8 @@
 
         "components/bootstrap": "3.2.0",
         "components/jquery": "1.11.1",
-        "afarkas/html5shiv": "3.7.2"
+        "afarkas/html5shiv": "3.7.2",
+        "twbs/bootstrap": "3.2.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
@@ -62,7 +63,7 @@
         ]
     },
     "config": {
-        "component-dir": "web/bundles/flflopupBundle/assets",
+        "component-dir": "web/bundles/flopupmain/assets",
         "component-baseurl": "/assets",
         "bin-dir": "bin"
     },
