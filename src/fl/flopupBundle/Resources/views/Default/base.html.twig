@@ -1,3 +1,6 @@
+{% if active is not defined or active is null %}
+    {% set active = 0 %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,17 +11,6 @@
     <meta name="author" content="LogIN-">
     <link rel="shortcut icon" href="/favicon.ico">
     <title>{% block title %}FlopUp.me{% endblock %}</title>
-
-    {% block javascripts %}
-        {% javascripts
-                      '@scripts_boundle'
-                      filter='yui_js'
-                      output='assets/main.js'
-        %}
-        <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-    {% endblock %}
-
     {% block stylesheets %}
         {% stylesheets
                       '@styles_boundle' 
@@ -39,14 +31,44 @@
     <![endif]-->
     {% block head %}{% endblock %}
     </head>
-    <body>
-        <div id="content">
-            <div class="sf-reset">
-                {% block content %}{% endblock %}
-            </div>
+    <body class="theme_white">
+        {{ include ('flflopupBundle:Default:nav.html.twig', {'active': active}) }}
+        <!-- Begin page content -->
+        <div class="container">
+            {% block header %}
+                <div class="jumbotron">
+                    <h1>Navbar example</h1>
+                    <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+                    <p>
+                      <a role="button" href="../../components/#navbar" class="btn btn-lg btn-primary">View navbar docs »</a>
+                    </p>
+                </div>
+            {% endblock %}
+
+            {% block content %}{% endblock %}
+
+            {# display the flash message in the template #}
+            <div>{{ dump( app.session.flashbag.get('info')) }}</div>
+        </div>       
+    {% block footer %}
+        <div class="footer">
+          <div class="container">
+            <p class="text-muted">Footer content</p>
+          </div>
         </div>
-        {% block footer %}
-            <footer>Credits & copyright</footer>
+    {% endblock %}
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        {% block javascripts %}
+            {% javascripts
+                          '@scripts_boundle'
+                          filter='yui_js'
+                          output='assets/main.js'
+            %}
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
         {% endblock %}
     </body>
 </html>

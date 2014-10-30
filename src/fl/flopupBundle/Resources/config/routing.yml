@@ -3,7 +3,25 @@ home:
   defaults: { _controller: flflopupBundle:Default:index }
 
 contact:
-  pattern: /contact
-  defaults:
-    _controller: FrameworkBundle:Template:template
-    template: 'flflopupBundle:Default:contact.html.twig'
+    pattern: /contact
+    defaults: { _controller: flflopupBundle:Default:contact }
+
+about:
+    pattern:  /about
+    defaults: { _controller: flflopupBundle:Default:about }
+
+register:
+    pattern:   /register
+    defaults:  { _controller: flflopupBundle:Security:register }
+
+login:
+    pattern:   /login
+    defaults:  { _controller: flflopupBundle:Security:login }
+login_check:
+    pattern:   /login_check
+logout:
+    path:     /logout
+
+test_security:
+    pattern: /secure_area
+    defaults: {_controller: flflopupBundle:Security:dumpString }

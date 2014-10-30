@@ -1,0 +1,33 @@
+{% extends 'flflopupBundle:Default:base.html.twig' %}
+
+{% block theme 'login' %}
+
+{% block title %}login{% endblock%}
+
+{% block header %}
+    <header>
+        <h1>Login:</h1>
+    </header>
+{% endblock %}
+
+{% block content %}
+    {% if error %}
+        <div>{{ error.message }}</div>
+    {% endif %}
+
+      <form action="{{ path('login_check') }}" method="post" class="form-signin" role="form">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="email" class="form-control" placeholder="Email address" name="_username" value="{{ last_username }}" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" name="_password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+{% endblock %}
+
+
+
